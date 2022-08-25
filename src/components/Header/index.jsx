@@ -2,42 +2,73 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Logo from '../../assets/logo.svg'
 
-
-const NavContainer = styled.nav
+const HeaderContainer = styled.header
 `
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
+    padding: 40px 0px;
+
+    @media (max-width: 768px)
+    {
+        padding: 20px 0 20px 0;
+    }
 `
 const HomeLogo = styled.img
 `
-    height: 70px;
+    height: 68px;
+
+    @media (max-width: 768px)
+    {
+        height: 47px;
+    }
 `
 const StyledLink = styled(Link)
 `
     padding: 10px 15px;
-    color: black;
-    text-decoration: none;
-    font-size: 18px;
+    font-size: 24px;
+    font-weight: 500;
     text-align: center;
+    color: #FF6060;
+
+    &:hover
+    {
+        color: #FF6060;
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px)
+    {
+        font-size: 12px;
+        padding: 0 10px;
+    }
 `
 
 function Header()
 {
     return (
-        <NavContainer>
+        <HeaderContainer>
             
-            header
-            <StyledLink to="/">
-                <HomeLogo src={Logo} />
-            </StyledLink>
-           
-            <StyledLink  to="/">
-                Accueil
-            </StyledLink>
+            <div className='container'>
+               <nav className='row justify-content-between align-items-center'>
 
-        </NavContainer>
+                    <div className="col col-md-6">
+                        <StyledLink to="/">
+                            <HomeLogo src={Logo} />
+                        </StyledLink>
+                    </div>
+
+                    <div className='col col-md-6 d-flex justify-content-end'>
+                        <StyledLink to="/">
+                        Accueil
+                        </StyledLink>
+
+                        <StyledLink to="/A_propos">
+                            A Propos
+                        </StyledLink>
+                    </div>
+
+                </nav>
+            </div>
+
+        </HeaderContainer>
     )
 }
     

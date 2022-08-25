@@ -1,25 +1,15 @@
 
 
-function Fiche_Etablissement()
+function Fiche_logement()
 {
     return (
         <div className="App">
-            Home
-            <header className="App-header">
-                
-                <p>
-                  Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="_#"
-                    target="blank"
-                >
-                  Learn React
-                </a>
-            </header>
+           
+
+
+            Logements
         </div>
     )
 }
 
-export default Fiche_Etablissement
+export default Fiche_logement
