@@ -3,8 +3,10 @@ import React from "react";
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 // Import perso
 import './index.css';
+
 import Home from './pages/Home'
 import Fiche_logement from "./pages/Fiche_logement";
 import A_propos from "./pages/A_propos";
