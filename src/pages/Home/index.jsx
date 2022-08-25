@@ -58,10 +58,9 @@ function Home()
 
             <Wrapper className='container'>
                 <div className="row justify-content-between gap-5">
-                    <Thumb></Thumb>
-                    <Thumb></Thumb>
-                    <Thumb></Thumb>
-                    <Thumb></Thumb>
+
+                    <Thumb className='col-md-4'></Thumb>
+ 
                 </div>
             </Wrapper>
         </div>

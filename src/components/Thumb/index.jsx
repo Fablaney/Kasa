@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import Logo from '../../assets/logo.svg'
+
+// datas
+import Data from "../../datas/logements.json";
 
 const ThumbCard = styled.div
+
+const StyledLink = styled(Link)
 `
     position: relative;
-    width: 340px;
-    height: 340px;
+    
 
     @media (max-width: 768px)
     {
@@ -35,7 +38,7 @@ const Rectangle = styled.div
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     border-radius: 10px;
 `
-const StyledLink = styled(Link)
+// const StyledLink = styled(Link)
 `
     position: absolute;
     left: 5.88%;
@@ -71,13 +74,28 @@ function Thumb()
     return (
         <ThumbCard className='col-md-4'>
 
-            <Img></Img>
+            {Data.map((item) => {
+                        return (
+                        <StyledLink to={`/Fiche_logement/${item.id}`} className='col-md-4' key={item.id}>
+
+                            <img src={item.cover} alt={item.title} className='house-image'/>
+
+                            <Rectangle>
+
+                                <h4 className='item-title'>{item.title}</h4>
+                            </Rectangle>
+                            
+                        </StyledLink>
+                        );
+                    })}
+
+            {/* <Img></Img>
 
             <Rectangle></Rectangle>
 
             <StyledLink to="/A_propos">
                 Titre de la location
-            </StyledLink>
+            </StyledLink> */}
 
         </ThumbCard>
     )
