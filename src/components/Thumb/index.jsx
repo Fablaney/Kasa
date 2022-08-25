@@ -4,7 +4,7 @@ import styled from 'styled-components'
 // datas
 import Data from "../../datas/logements.json";
 
-const ThumbCard = styled.div
+const Wrapper = styled.div
 `
     background: #F7F7F7;
     border-radius: 25px;
@@ -20,7 +20,7 @@ const StyledLink = styled(Link)
 `
     border-radius: 25px;
     position: relative;
-    border: 1px solid red;
+    height: 340px;
 `
 const Img = styled.img
 `
@@ -29,13 +29,12 @@ const Img = styled.img
 ` 
 const Ombre = styled.div
 `
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    height: 100%;
 `
 const Titre = styled.h3
 `
@@ -51,7 +50,7 @@ const Titre = styled.h3
 function Thumbs()
 {
     return (
-        <ThumbCard className='container'>
+        <Wrapper className='container'>
             <div className="row">
             
                 {Data.map((item) => {
@@ -67,11 +66,11 @@ function Thumbs()
 
                             </StyledLink>
                         </div>
-                    )
+                    );
                 })}
 
             </div>
-        </ThumbCard>
+        </Wrapper>
     )
 }
     
