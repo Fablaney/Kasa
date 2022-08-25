@@ -1,15 +1,19 @@
+import styled from "styled-components"
+
+// datas
+import Data from "../../datas/logements.json"
+
+
 
 
 function Fiche_logement()
 {
+
     return (
-        <div className="App">
-           
-
-
-            Logements
+        <div>
+           Fiche_logement
         </div>
     )
 }
 
-export default Fiche_logement
+export default Fiche_logement;

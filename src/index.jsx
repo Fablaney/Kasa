@@ -27,7 +27,7 @@ root.render(
 
             <Route path="/" element={<Home/>}/>
 
-            <Route path="/Fiche_logement" element={<Fiche_logement/>}/>
+            <Route path="/Fiche_logement/:id" element={<Fiche_logement/>}/>
 
             <Route path="/A_propos" element={<A_propos/>}/>
 
