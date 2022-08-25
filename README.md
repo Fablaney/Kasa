@@ -85,7 +85,7 @@ footer mobile OK
 
 Pages
 
-Home à finir
+Home a figloner
 
 Fiches Logements à faire
 A Propos fignoler les dropdowns avec bootstrap

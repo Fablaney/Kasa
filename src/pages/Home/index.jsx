@@ -1,8 +1,7 @@
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import banner from '../../assets/banner.jpg'
 
-import Thumb from '../../components/Thumb'
+import Thumbs from '../../components/Thumb'
 
 const Banner = styled.div
 `
@@ -19,7 +18,7 @@ const Banner = styled.div
     @media (max-width: 768px)
     {
         
-    }
+    } 
 `
 const BannerText = styled.div
 `
@@ -33,18 +32,6 @@ const BannerText = styled.div
         font-size: 24px;
     }
 `
-const Wrapper = styled.div
-`
-    background: #F7F7F7;
-    border-radius: 25px;
-    padding: 56px;
-    margin-bottom: 43px;
-
-    @media (max-width: 768px)
-    {
-        
-    }
-`
 
 function Home()
 {
@@ -56,13 +43,8 @@ function Home()
 
             </Banner>
 
-            <Wrapper className='container'>
-                <div className="row justify-content-between gap-5">
-
-                    <Thumb className='col-md-4'></Thumb>
+            <Thumbs></Thumbs>
  
-                </div>
-            </Wrapper>
         </div>
     )
 }

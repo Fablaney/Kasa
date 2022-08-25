@@ -6,99 +6,73 @@ import Data from "../../datas/logements.json";
 
 const ThumbCard = styled.div
 `
-    position: relative;
-    width: 340px;
-    height: 340px;
+    background: #F7F7F7;
+    border-radius: 25px;
+    padding: 56px;
+    margin-bottom: 43px;
 
     @media (max-width: 768px)
     {
-        padding: 20px 0 20px 0;
+        
     }
-`
-const Img = styled.div
-`
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-
-    background: #FF6060;
-    border-radius: 10px;
-`
-const Rectangle = styled.div
-`
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-    border-radius: 10px;
 `
 const StyledLink = styled(Link)
 `
+    border-radius: 25px;
+    position: relative;
+    border: 1px solid red;
+`
+const Img = styled.img
+`
+    width: 100%;
+    object-fit: cover;
+` 
+const Ombre = styled.div
+`
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     position: absolute;
-    left: 5.88%;
-    right: 5.88%;
-    top: 78.82%;
-    bottom: 5.88%;
-
-    font-weight: 500;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+`
+const Titre = styled.h3
+`
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
     font-size: 18px;
     line-height: 26px;
-
-    display: flex;
-    align-items: flex-end;
-
     color: white;
-
-    &:hover
-    {
-        color: white;
-    }
-
-    @media (max-width: 768px)
-    {
-        font-size: 12px;
-        padding: 0 10px;
-    }
 `
 
 
-
-function Thumb()
+function Thumbs()
 {
     return (
-        <ThumbCard className='col-md-4'>
-            {Data.map((item) => {
-                        return (
-                        <Link
-                            to={`/house/${item.id}`}
-                            className='house-link'
-                            key={item.id}>
-                            <img
-                            src={item.cover}
-                            alt={item.title}
-                            className='house-image'
-                            />
-                            <div className='card-info'>
-                            <h4 className='item-title'>{item.title}</h4>
-                            </div>
-                        </Link>
-                        );
-                    })}
-            <Img></Img>
+        <ThumbCard className='container'>
+            <div className="row">
+            
+                {Data.map((item) => {
+                    return (
+                        <div className="col-md-4 mb-4">
+                            <StyledLink to={`/Fiche_logement/${item.id}`} key={item.id}>
 
-            <Rectangle></Rectangle>
+                                <Img className='test' src={item.cover} alt={item.title}></Img>
 
-            <StyledLink to="/A_propos">
-                Titre de la location
-            </StyledLink>
+                                <Ombre className='test'></Ombre>
+                                
+                                <Titre className='test'>{item.title}</Titre>
 
+                            </StyledLink>
+                        </div>
+                    )
+                })}
+
+            </div>
         </ThumbCard>
     )
 }
     
-export default Thumb
+export default Thumbs
