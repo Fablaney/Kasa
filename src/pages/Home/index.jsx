@@ -18,7 +18,7 @@ const Banner = styled.div
     @media (max-width: 768px)
     {
         
-    } 
+    }
 `
 const BannerText = styled.div
 `

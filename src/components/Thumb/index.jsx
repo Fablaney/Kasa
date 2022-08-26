@@ -25,20 +25,25 @@ const StyledLink = styled(Link)
 const Img = styled.img
 `
     width: 100%;
+    height: 340px;
     object-fit: cover;
+    border-radius: 25px;
 ` 
 const Ombre = styled.div
 `
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-    position: absolute;
+    position: relative;
+    height: 100%;
+    top: 24px;
+    bottom: 0;
     left: 0;
     right: 0;
-    top: 0;
-    bottom: 0;
+    z-index: 10;
+    border-radius: 25px;
 `
 const Titre = styled.h3
 `
-    position: absolute;
+    position: absolute; 
     left: 5%;
     bottom: 5%;
     font-size: 18px;
@@ -46,25 +51,28 @@ const Titre = styled.h3
     color: white;
 `
 
-
 function Thumbs()
 {
     return (
         <Wrapper className='container'>
             <div className="row">
-            
+
                 {Data.map((item) => {
                     return (
                         <div className="col-md-4 mb-4">
+
                             <StyledLink to={`/Fiche_logement/${item.id}`} key={item.id}>
 
                                 <Img className='test' src={item.cover} alt={item.title}></Img>
 
-                                <Ombre className='test'></Ombre>
-                                
-                                <Titre className='test'>{item.title}</Titre>
+                                <Ombre className='test'>
+
+                                    <Titre className='test'>{item.title}</Titre>
+
+                                </Ombre>
 
                             </StyledLink>
+
                         </div>
                     );
                 })}
@@ -73,5 +81,5 @@ function Thumbs()
         </Wrapper>
     )
 }
-    
+
 export default Thumbs
