@@ -14,7 +14,8 @@ const Wrapper = styled.div
 
     @media (max-width: 768px)
     {
-        
+        background: transparent;
+        padding: 0;
     }
 `
 // card des images = Lien vers Fiche_logement
@@ -66,7 +67,7 @@ function Thumbs()
 
                 {Data.map((item) => {
                     return (
-                        <div className="col-md-4 mb-4">
+                        <div className="col-lg-4 col-md-6 mb-4">
 
                             <StyledLink to={`/Fiche_logement/${item.id}`} key={item.id}>
 
