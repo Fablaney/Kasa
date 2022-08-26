@@ -26,12 +26,13 @@ function HouseSingle()
 
                 <span className='house-location'>{house.location}</span>
 
-                <div className='house-tags'>
-                {house.tags.map((tag) => (
-                    <div className='tag' key={tag}>
-                        {tag}
-                    </div>
-                ))}
+                <div className='house-tags test row'>
+                    Tags
+                    {house.tags.map((tag) => (
+                        <div className='tag' key={tag}>
+                            {tag}
+                        </div>
+                    ))}
                 </div>
 
             </div>
