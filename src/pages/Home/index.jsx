@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import banner from '../../assets/banner.jpg'
 
-import Thumbs from '../../components/Thumb'
+import Wrapper from '../../components/Wrapper'
 
 const Banner = styled.div
 `
@@ -43,7 +43,7 @@ function Home()
 
             </Banner>
 
-            <Thumbs></Thumbs>
+            <Wrapper></Wrapper>
  
         </div>
     )
