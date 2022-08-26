@@ -7,7 +7,7 @@ import Data from "../../datas/logements.json"
 function Wrapper()
 {
     return (
-        <div className='container'>
+        <div className='container wrapper'>
             <div className="row">
 
                 {
