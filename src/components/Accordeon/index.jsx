@@ -1,27 +1,23 @@
-import Accordion from 'react-bootstrap/Accordion';
+import Accordion from 'react-bootstrap/Accordion'
 
 import "./style.scss"
 
 function Accordeon({ title, children, numero })
 {
     return (
-        <div className="col-md-6">
+        <Accordion alwaysOpen className="col-md-6 mb-4">
 
-            <Accordion alwaysOpen>
+            <Accordion.Item eventKey={numero}>
 
-                <Accordion.Item eventKey={numero}>
+                <Accordion.Header>{title}</Accordion.Header>
 
-                    <Accordion.Header>{title}</Accordion.Header>
+                <Accordion.Body>
+                    {children}
+                </Accordion.Body>
 
-                    <Accordion.Body>
-                        {children}
-                    </Accordion.Body>
+            </Accordion.Item>
 
-                </Accordion.Item>
-
-            </Accordion>
-
-        </div>
+        </Accordion>
     )
 }
 

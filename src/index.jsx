@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Import perso
-import './index.css';
+import './index.scss';
 
 import Home from './pages/Home'
 import Fiche_logement from "./pages/Fiche_logement";

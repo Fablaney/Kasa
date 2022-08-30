@@ -1,32 +1,13 @@
-import styled from 'styled-components'
-import banner from '../../assets/about.jpg'
 import Accordion from 'react-bootstrap/Accordion';
 
 import "./style.scss"
 
-const Banner = styled.div
-`
-    height: 223px;
-    margin-top: 100px;
-    margin-bottom: 43px;
-    border-radius: 25px;
-
-    background: rgba(0, 0, 0, 0.3) url(${banner});
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: darken;
-
-    @media (max-width: 768px)
-    {
-        
-    }
-`
 function A_propos()
 {
     return (
         <div>
 
-            <Banner className='container banner'></Banner>
+            <div className='container banner'></div>
 
             <div className="container ">
                 <Accordion alwaysOpen className='accordion-about'>

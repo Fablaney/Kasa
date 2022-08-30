@@ -30,10 +30,10 @@ function Fiche_logement()
             <div className='house-accordion row py-5'>
 
                 {/* accordeon description */}
-                <Accordeon title='Description' nomero="1">{house.description}</Accordeon>
+                <Accordeon title='Description' numero="1">{house.description}</Accordeon>
 
                 {/* accordeon equippement */}
-                <Accordeon title='Equipements' nomero="2">
+                <Accordeon title='Equipements' numero="2">
                     
                     {house.equipments.map((item) => (
                         <p key={item}>{item}</p>

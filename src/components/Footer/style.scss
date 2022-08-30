@@ -1,0 +1,36 @@
+footer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 66px;
+    padding-bottom: 29px;
+    background-color: black;
+
+    @media (max-width: 768px)
+    {
+        padding-top: 62px;
+        padding-bottom: 62px;
+    }
+}
+.home-logo
+{
+    width: 122px;
+    padding-bottom: 29px;
+
+    @media (max-width: 768px)
+    {
+        padding-bottom: 20px;
+    }
+}
+.copyright
+{
+    color: white;
+    font-size: 24px;
+
+    @media (max-width: 768px)
+    {
+        font-size: 12px;
+    }
+}
