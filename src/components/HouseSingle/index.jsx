@@ -1,59 +1,51 @@
 import React from "react"
+import { useParams } from "react-router-dom"
+import Tag from "../Tag"
 import "./style.scss"
+
 // datas
 import Data from "../../datas/logements.json"
-import { useParams } from "react-router-dom"
-// import { FaStar } from "react-icons/fa"
-
 
 function HouseSingle()
 {
-    const { id } = useParams();
-    const house = Data.find((item) => item.id === id);
-    // const starColor = {
-    //     red: "#ff6060",
-    //     grey: "#E3E3E3",
-    // };
+    const { id } = useParams()
 
-    // const stars = Array(5).fill(0);
+    const house = Data.find((item) => item.id === id)
 
     return (
-        <div className='house-infos-container test'>
+        <div className='house-infos-container row'>
 
-            <div className='house-infos-details'>
+            <div className='house-infos col-md-8'>
 
+                {/* titre */}
                 <h2 className='house-title'>{house.title}</h2>
 
-                <span className='house-location'>{house.location}</span>
+                {/* localisation */}
+                <span className='house-location mb-4'>{house.location}</span>
 
-                <div className='house-tags test row'>
-                    Tags
-                    {house.tags.map((tag) => (
-                        <div className='tag' key={tag}>
-                            {tag}
-                        </div>
-                    ))}
-                </div>
+                {/* tages */}
+                <Tag house={house}></Tag>
 
             </div>
 
-            <div className='house-host-rating'>
+            <div className='house-hote col-md-4'>
 
-                <div className='host-infos-container'>
-                    <span className='host-name'>{house.host.name}</span>
-                    <img className='host-profil' alt='house' src={house.host.picture} />
+                {/* nom et photo */}
+                <div className='host-infos mb-4'>
+
+                    <div className='name'>{house.host.name.replace(" ", "/n}") }</div>
+
+                    <img className='hote-image' alt='house' src={house.host.picture} />
+
                 </div>
 
-                <div className='host-rating'>
-                    <div className='stars'>
-                        {/* {stars.map((_, index) => (
-                        // <FaStar
-                        //     key={index}
-                        //     className='stars'
-                        //     color={house.rating > index ? starColor.red : starColor.grey}
-                        // />
-                        ))} */}
-                    </div>
+                {/* div étoiles */}
+                <div className='stars d-flex justify-content-end'>
+                    <i className="fas fa-star stars"></i>
+                    <i className="fas fa-star stars"></i>
+                    <i className="fas fa-star stars"></i>
+                    <i className="fas fa-star stars"></i>
+                    <i className="fas fa-star stars"></i>
                 </div>
                 
             </div>

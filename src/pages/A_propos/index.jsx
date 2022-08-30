@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import banner from '../../assets/about.jpg'
 
@@ -26,7 +25,7 @@ function A_propos()
     return (
         <div>
 
-            <Banner className='container'></Banner>
+            <Banner className='container banner'></Banner>
 
             <div className="container">
                 <Accordion alwaysOpen >
@@ -61,6 +60,7 @@ function A_propos()
 
                 </Accordion>
             </div>
+
         </div>
     ) 
 }

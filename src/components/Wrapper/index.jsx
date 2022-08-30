@@ -1,6 +1,6 @@
 import Card from '../Card';
-
 import "./style.scss"
+
 // datas
 import Data from "../../datas/logements.json"
 
@@ -12,7 +12,7 @@ function Wrapper()
 
                 {
                     Data.map((item) => {
-                        return <Card house={item} number={"1"}></Card>
+                        return <Card house={item}></Card>
                     })
                 }
     

@@ -2,7 +2,7 @@ import React from "react";
 import { useParams, Navigate } from "react-router-dom";
 import Slider from "../../components/Slider";
 import HouseSingle from "../../components/HouseSingle";
-// import Accordion from "../components/Accordion/Accordion";
+import Accordion from "../../components/Accordion";
 
 // datas
 import Data from "../../datas/logements.json"
@@ -16,7 +16,7 @@ function Fiche_logement()
 
     if (!house)
     {
-        return <Navigate to='/404'/>
+        return <Navigate to='/Error'/>
     } 
   
     return (
@@ -24,15 +24,22 @@ function Fiche_logement()
 
             <Slider pictures={house.pictures}></Slider>
 
-            <HouseSingle></HouseSingle>
+            <HouseSingle className="mb-4"></HouseSingle>
 
-            <div className='accordion-container'>
-                {/* <Accordion title='Description'>{house.description}</Accordion> */}
-                {/* <Accordion title='Equipements'> */}
+            <div className='house-accordion row test gap-0'>
+
+                {/* accordeon description */}
+                <Accordion title='Description' nomero="1">{house.description}</Accordion>
+
+                {/* accordeon equippement */}
+                <Accordion title='Equipements' nomero="2">
                     {house.equipments.map((item) => (
-                        <div key={item}>{item}</div>
+                        <ul>
+                            <li key={item}>{item}</li>
+                        </ul>
                     ))}
-                {/* </Accordion> */}
+                </Accordion>
+
             </div>
         </div>
     )

@@ -1,73 +1,22 @@
 import { Link } from "react-router-dom"
-import styled from "styled-components"
-
-
-const ErrorContainer = styled.div
-`
-    color: #FF6060;
-    text-align: center;
-    padding-top: 100px;
-
-    @media (max-width: 768px)
-    {
-        padding-top: 90px;
-    }
-`
-const ErrorNumber = styled.div
-`
-    font-size: 288px;
-    font-weight: 700;
-    margin-bottom: 66px;
-
-    @media (max-width: 768px)
-    {
-        font-size: 96px;
-        margin-bottom: 10px;
-    }
-`
-const ErrorTile = styled.h1
-`
-    font-size: 36px;
-    font-weight: 500;
-    margin-bottom: 182px;
-
-    @media (max-width: 768px)
-    {
-        font-size: 18px;
-        margin-bottom: 133px;
-    }
-`
-const ErrorLink = styled.div
-`
-    font-size: 18px;
-    font-weight: 500;
-    color: #FF6060;
-    padding-bottom: 29px;
-
-    @media (max-width: 768px)
-    {
-        font-size: 14px;
-    }
-`
+import "./style.scss"
 
 function Error()
 {
     return (
-        <ErrorContainer>
+        <div className="error-container">
 
-            <ErrorNumber>
-                404
-            </ErrorNumber>
+            <div className="error-number">404</div>
 
-           <ErrorTile>
-                Oups! La page que vous demandez n'existe pas.
-           </ErrorTile>
+            <h1 className="error-title">Oups! La page que vous demandez n'existe pas.</h1>
 
             <Link to="/">
-                <ErrorLink>Retourner sur la page d’accueil</ErrorLink>
+
+                <div className="error-link">Retourner sur la page d’accueil</div>
+
             </Link>
 
-        </ErrorContainer>
+        </div>
     )
 }
 
