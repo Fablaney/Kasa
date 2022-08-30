@@ -12,7 +12,7 @@ function Wrapper()
 
                 {
                     Data.map((item) => {
-                        return <Card house={item}></Card>
+                        return <Card house={item} key={item.id}></Card>
                     })
                 }
     

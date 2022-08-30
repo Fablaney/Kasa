@@ -1,13 +1,15 @@
+import Accordion from 'react-bootstrap/Accordion';
+
 import "./style.scss"
 
-function Accordion({ title, children, numero })
+function Accordeon({ title, children, numero })
 {
     return (
         <div className="col-md-6">
 
-            <Accordion alwaysOpen >
+            <Accordion alwaysOpen>
 
-                <Accordion.Item eventKey={numero} className='mb-4'>
+                <Accordion.Item eventKey={numero}>
 
                     <Accordion.Header>{title}</Accordion.Header>
 
@@ -23,4 +25,4 @@ function Accordion({ title, children, numero })
     )
 }
 
-export default Accordion
+export default Accordeon

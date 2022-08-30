@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import banner from '../../assets/about.jpg'
-
 import Accordion from 'react-bootstrap/Accordion';
+
+import "./style.scss"
 
 const Banner = styled.div
 `
@@ -27,8 +28,8 @@ function A_propos()
 
             <Banner className='container banner'></Banner>
 
-            <div className="container">
-                <Accordion alwaysOpen >
+            <div className="container ">
+                <Accordion alwaysOpen className='accordion-about'>
 
                     <Accordion.Item eventKey="1" className='mb-4'>
                         <Accordion.Header>Fiabilité</Accordion.Header>
