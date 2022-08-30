@@ -1,12 +1,9 @@
 .house-infos-container
 {
     color: #ff6060;
-} 
-.house-infos
-{
-    display: flex;
-    flex-direction: column;
 }
+
+// 1ere section gauche
 .house-title
 {
     color: #ff6060;
@@ -28,11 +25,18 @@
     }
 }
 
-// bloc droit nom / image / étoiles
+// 2eme section droit nom / image / étoiles
 .house-hote
 {
     display: flex;
     flex-direction: column;
+
+    @media only screen and (max-width: 768px)
+    {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 .host-infos
 {
@@ -40,6 +44,12 @@
     justify-content: flex-end;
     align-items: center;
     margin-bottom: 24px;
+
+    @media only screen and (max-width: 768px)
+    {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
 }
 // profil de l'hote
 .name

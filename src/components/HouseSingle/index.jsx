@@ -15,7 +15,8 @@ function HouseSingle()
     return (
         <div className='house-infos-container row'>
 
-            <div className='house-infos col-md-8'>
+            {/* section 1 gauche */}
+            <div className='house-infos col-md-8 mb-4'>
 
                 {/* titre */}
                 <h2 className='house-title'>{house.title}</h2>
@@ -28,12 +29,13 @@ function HouseSingle()
 
             </div>
 
+            {/* section 2 droit */}
             <div className='house-hote col-md-4'>
 
                 {/* nom et photo */}
-                <div className='host-infos mb-4'>
+                <div className='host-infos'>
 
-                    <div className='name'>{house.host.name.replace(" ", "/n}") }</div>
+                    <div className='name'>{house.host.name.replace(" ", "\n")}</div>
 
                     <img className='hote-image' alt='house' src={house.host.picture} />
 
