@@ -12,19 +12,9 @@ function HouseSingle()
 
     const house = Data.find((item) => item.id === id)
 
-    console.log(house.rating)
     const [firstname, lastname] = house.host.name.split(" ")
 
     const stars = Array(5).fill(0)
-    console.log(stars)
-
-    // stars.map((_, index) => (
-    //     <FaStar
-    //         key={index}
-    //         className='stars'
-    //         color={house.rating > index ? starColor.red : starColor.grey}
-    //     />
-    //     ))
 
     return (
         <div className='house-infos-container row'>
