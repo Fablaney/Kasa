@@ -12,7 +12,20 @@ function HouseSingle()
 
     const house = Data.find((item) => item.id === id)
 
-    const [firstname, lastname] = house.host.name.split(" ");
+    console.log(house.rating)
+    const [firstname, lastname] = house.host.name.split(" ")
+
+    const stars = Array(5).fill(0)
+    console.log(stars)
+
+    // stars.map((_, index) => (
+    //     <FaStar
+    //         key={index}
+    //         className='stars'
+    //         color={house.rating > index ? starColor.red : starColor.grey}
+    //     />
+    //     ))
+
     return (
         <div className='house-infos-container row'>
 
@@ -47,11 +60,12 @@ function HouseSingle()
 
                 {/* div étoiles */}
                 <div className='stars d-flex justify-content-end'>
-                    <i className="fas fa-star stars"></i>
-                    <i className="fas fa-star stars"></i>
-                    <i className="fas fa-star stars"></i>
-                    <i className="fas fa-star stars"></i>
-                    <i className="fas fa-star stars"></i>
+                    {/* je boucle sur mon pseudo tableau d'étoiles */}
+                    {stars.map((i, index) => (
+                        // si le rating est > à l'index 0 alors alors étoile rouge sinon rating 0 = index 0 =in étoile blanche
+                        house.rating > index ? <i className="fas fa-star stars star-red" key={index}></i> : <i className="fas fa-star stars star-grey" key={index}></i>
+                    ))}
+
                 </div>
                 
             </div>
