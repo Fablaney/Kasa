@@ -26,7 +26,7 @@ function HouseSingle()
                 <h2 className='house-title'>{house.title}</h2>
 
                 {/* localisation */}
-                <span className='house-location mb-4'>{house.location}</span>
+                <span className='house-location'>{house.location}</span>
 
                 {/* tages */}
                 <Tag house={house}></Tag>
