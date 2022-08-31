@@ -12,6 +12,7 @@ function HouseSingle()
 
     const house = Data.find((item) => item.id === id)
 
+    const [firstname, lastname] = house.host.name.split(" ");
     return (
         <div className='house-infos-container row'>
 
@@ -35,7 +36,10 @@ function HouseSingle()
                 {/* nom et photo */}
                 <div className='host-infos'>
 
-                    <div className='name'>{house.host.name.replace(" ", "\n")}</div>
+                    <div className='name'>
+                        <div>{firstname}</div>
+                        <div>{lastname}</div>
+                    </div>
 
                     <img className='hote-image' alt='house' src={house.host.picture} />
 
