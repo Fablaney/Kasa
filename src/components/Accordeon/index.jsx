@@ -5,19 +5,21 @@ import "./style.scss"
 function Accordeon({ title, children, numero })
 {
     return (
-        <Accordion alwaysOpen className="col-md-6 mb-4">
+        <div class="accordions col-md-6 mb-4">
 
-            <Accordion.Item eventKey={numero}>
+            <div class="accordion" eventKey={numero}>
 
-                <Accordion.Header>{title}</Accordion.Header>
+                <input type="checkbox" id={"accordeon-num-"+numero} />
 
-                <Accordion.Body>
+                <label class="acc-label" for={"accordeon-num-"+numero}>{title}</label>
+
+                <div class="acc-content">
                     {children}
-                </Accordion.Body>
+                </div>
+            </div>
 
-            </Accordion.Item>
+        </div>
 
-        </Accordion>
     )
 }
 

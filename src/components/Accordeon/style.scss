@@ -1,0 +1,83 @@
+.accordions
+{
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 1.2em;
+}
+
+.accordion
+{
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.acc-label
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: #FF6060;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 13px; 
+
+    cursor: pointer;
+
+    @media (max-width: 768px)
+    {
+        font-size: 13px;
+        padding: 10px; 
+    }
+}
+
+.accordion:first-child
+{
+    // border-bottom: 1px solid;
+}
+
+.acc-label::after
+{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f107";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transition: all 0.4s ease;
+    
+}
+.acc-content
+{
+    max-height: 0;
+    color: #FF6060;
+    font-size: 18px;
+    background-color: #F6F6F6;
+    transition: all 0.4s ease;
+    border-radius: 10px;
+
+    @media (max-width: 768px)
+    {
+        font-size: 12px;
+    }
+}
+input
+{
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+input:checked+.acc-label::after
+{
+    transform: rotate(-180deg);
+    margin-top: 8px;
+    @media (max-width: 768px)
+    {
+        margin-top: 6px;
+    }
+}
+input:checked~.acc-content
+{
+    max-height: 100vh;
+    padding: 1em;
+}
