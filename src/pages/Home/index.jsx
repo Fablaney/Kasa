@@ -4,7 +4,7 @@ import "./style.scss"
 function Home()
 {
     return (
-        <div>
+        <div className='padding-sm-5'>
 
             <div className='banner-home container d-flex align-items-center'>
 

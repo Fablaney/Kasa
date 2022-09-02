@@ -1,5 +1,3 @@
-import Accordion from 'react-bootstrap/Accordion'
-
 import "./style.scss"
 
 function Accordeon({ title, children, numero })
