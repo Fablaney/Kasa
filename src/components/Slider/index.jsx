@@ -16,7 +16,7 @@ function Slider({ pictures })
     return (
         <div className="carousel my-5" >
 
-            <img src={pictures[current]} alt="" />
+            <img src={pictures[current]} alt=""/>
 
             <button className="lightbox_prev" onClick={prev}><span className="fas fa-angle-left"></span></button>
             <button className="lightbox_next" onClick={next}><span className="fas fa-angle-right"></span></button>
