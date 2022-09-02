@@ -21,7 +21,7 @@ function Fiche_logement()
     }
 
     return (
-        <div className="container my-5">
+        <div className="container padding-sm-5">
 
             <Slider pictures={house.pictures}></Slider>
 
