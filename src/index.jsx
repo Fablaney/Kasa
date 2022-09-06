@@ -16,6 +16,15 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 
+let baseURL = ''
+if (process.env.NODE_ENV == 'production')
+{
+    baseURL = 'Kasa/'
+}
+else
+{
+    baseURL = '/'
+}
 
 const container = document.getElementById('root')
 const root = createRoot(container)
@@ -27,14 +36,14 @@ root.render(
 
         <Routes>
 
-            <Route path="/" element={<Home/>}/>
+            <Route exact path={baseURL + ''} element={<Home/>}/>
 
-            <Route path="/Fiche_logement/:id" element={<Fiche_logement/>}/>
+            <Route path={baseURL + 'Fiche_logement/:id'} element={<Fiche_logement/>}/>
 
-            <Route path="/A_propos" element={<A_propos/>}/>
+            <Route path={baseURL + 'A_propos'} element={<A_propos/>}/>
 
             {/* page d'erreur */}
-            <Route path="/*" element={<Error/>}/>
+            <Route path={baseURL + '*'} element={<Error/>}/>
 
         </Routes>
 
