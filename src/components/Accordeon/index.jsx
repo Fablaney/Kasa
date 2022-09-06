@@ -17,7 +17,6 @@ function Accordeon({ title, children, numero })
             </div>
 
         </div>
-
     )
 }
 
